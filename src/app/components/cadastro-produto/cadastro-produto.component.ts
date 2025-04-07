@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProdutoService } from '../../services/produto.service';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-produto',
-  imports: [],
+  imports: [FormsModule, RouterModule],
   templateUrl: './cadastro-produto.component.html',
   styleUrl: './cadastro-produto.component.css'
 })

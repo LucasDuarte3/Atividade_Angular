@@ -1,6 +1,6 @@
 // app.routes.ts
 import { Routes } from '@angular/router';
-import { PainelPrincipalComponent } from './components/painel-principal/painel.principal.component';
+import { PainelPrincipalComponent } from './components/painel-principal/painel-principal-component';
 import { CadastroProdutoComponent } from './components/cadastro-produto/cadastro-produto.component';
 
 export const routes: Routes = [

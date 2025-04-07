@@ -16,13 +16,14 @@
       <tr *ngFor="let produto of produtos">
         <td>{{ produto.id }}</td>
         <td>
-          <img [src]="'assets/images/' + produto.foto" alt="{{ produto.produto }}" width="60" height="60">
+          <img [src]="'assets/images/' + produto.foto" [alt]="produto.produto" width="60" height="60" 
+               onerror="this.src='assets/images/jogo1.PNG'">
         </td>
         <td>{{ produto.produto }}</td>
         <td>{{ produto.descricao }}</td>
-        <td>R$ {{ produto.preco }}</td>
+        <td>R$ {{ (produto.preco / 100).toFixed(2).replace('.', ',') }}</td>
         <td>
-          <button class="btn btn-primary btn-sm" (click)="editarProduto(produto.id)">Editar</button>
+          <button class="btn btn-primary btn-sm me-2" (click)="editarProduto(produto.id)">Editar</button>
           <button class="btn btn-danger btn-sm" (click)="excluirProduto(produto.id)">Excluir</button>
         </td>
       </tr>
